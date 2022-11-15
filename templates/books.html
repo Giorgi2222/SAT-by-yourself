@@ -1,0 +1,107 @@
+{% extends "layout.html" %} {% block title %} books {% endblock %} {% block main
+%}
+<div class="section pt-3">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Book</th>
+        <th>Author</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <h2>Highly Recommended</h2>
+      {%for book in books['req']%} {% if (loop.index - 1) % 4 == 0%}
+      <tr class="bg-info">
+        <th>{{loop.index}}</th>
+        <th>
+          <a href="{{ book.url }}">{{ book.name }}</a>
+        </th>
+        <th>{{ book.author }}</th>
+        <th>{{ book.category }}</th>
+      </tr>
+      {% elif (loop.index - 1) % 4 == 1 %}
+      <tr class="bg-light">
+        <th>{{loop.index}}</th>
+        <th>
+          <a href="{{ book.url }}">{{ book.name }}</a>
+        </th>
+        <th>{{ book.author }}</th>
+        <th>{{ book.category }}</th>
+      </tr>
+      {% elif (loop.index - 1) % 4 == 2 %}
+      <tr class="bg-warning">
+        <th>{{loop.index}}</th>
+        <th>
+          <a href="{{ book.url }}">{{ book.name }}</a>
+        </th>
+        <th>{{ book.author }}</th>
+        <th>{{ book.category }}</th>
+      </tr>
+      {% else %}
+      <tr class="bg-light">
+        <th>{{loop.index}}</th>
+        <th>
+          <a href="{{ book.url }}">{{ book.name }}</a>
+        </th>
+        <th>{{ book.author }}</th>
+        <th>{{ book.category }}</th>
+        {% endif %} {%endfor%}
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="section pt-4">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Book</th>
+        <th>Author</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <h2>Optional</h2>
+      {%for book in books['rec']%} {% if (loop.index - 1) % 4 == 0%}
+      <tr class="bg-info">
+        <th>{{loop.index}}</th>
+        <th>
+          <a href="{{ book.url }}">{{ book.name }}</a>
+        </th>
+        <th>{{ book.author }}</th>
+        <th>{{ book.category }}</th>
+      </tr>
+      {% elif (loop.index - 1) % 4 == 1 %}
+      <tr class="bg-light">
+        <th>{{loop.index}}</th>
+        <th>
+          <a href="{{ book.url }}">{{ book.name }}</a>
+        </th>
+        <th>{{ book.author }}</th>
+        <th>{{ book.category }}</th>
+      </tr>
+      {% elif (loop.index - 1) % 4 == 2 %}
+      <tr class="bg-warning">
+        <th>{{loop.index}}</th>
+        <th>
+          <a href="{{ book.url }}">{{ book.name }}</a>
+        </th>
+        <th>{{ book.author }}</th>
+        <th>{{ book.category }}</th>
+      </tr>
+      {% else %}
+      <tr class="bg-light">
+        <th>{{loop.index}}</th>
+        <th>
+          <a href="{{ book.url }}">{{ book.name }}</a>
+        </th>
+        <th>{{ book.author }}</th>
+        <th>{{ book.category }}</th>
+        {% endif %} {%endfor%}
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layout.html" %} {% block title %} Home {% endblock %} {% block main
+%}
+<form action="/" method="post">
+  <div class="mb-3">
+    <h1>Enter Your Information</h1>
+    <h5 class="p-3">
+      Be as accurate as you can in order to receive effective recommendations
+    </h5>
+
+    <input
+      autocomplete="off"
+      autofocus
+      class="form-control mx-auto w-auto"
+      id="target_score"
+      name="target_score"
+      placeholder="Target Score (800 to 1600)"
+      type="number"
+      min="800"
+      max="1600"
+    />
+  </div>
+  <div class="mb-3">
+    <select
+      class="form-control mx-auto w-auto"
+      id="english_level"
+      name="english_level"
+    >
+      <option>B1</option>
+      <option>B2</option>
+      <option>B2+</option>
+      <option>C1</option>
+      <option>C1+</option>
+      <option>C2</option>
+    </select>
+  </div>
+  <h5>Current Scores (Optional):</h5>
+  <div class="mb-3">
+    <input
+      autocomplete="off"
+      autofocus
+      class="form-control mx-auto w-auto"
+      id="english"
+      name="english"
+      placeholder="English Score (200 to 800)"
+      type="number"
+      min="200"
+      max="800"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      autocomplete="off"
+      autofocus
+      class="form-control mx-auto w-auto"
+      name="math"
+      id="math"
+      placeholder="Math Score (200 to 800)"
+      type="number"
+      min="200"
+      max="800"
+    />
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+{% endblock %}

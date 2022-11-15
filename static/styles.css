@@ -1,0 +1,103 @@
+/* Size for brand */
+nav .navbar-brand {
+  font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue {
+  color: #537fbe;
+}
+nav .navbar-brand .red {
+  color: #ea433b;
+}
+nav .navbar-brand .yellow {
+  color: #f5b82e;
+}
+nav .navbar-brand .green {
+  color: #2e944b;
+}
+
+table {
+  background-color: transparent;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+  vertical-align: middle;
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: rgb(179, 208, 255, 0.3);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#target_score,
+#english_level,
+#math,
+#english {
+  width: 220px !important;
+}
+
+.words {
+  display: flex;
+  width: 50%;
+}
+
+#changelagunge {
+  border: grey solid 2px;
+  display: flex;
+  border-radius: 10px;
+  margin-top: -2px;
+  margin-right: 30px;
+}
+
+#eng {
+  border-right: grey solid 1px;
+}
+
+img {
+  width: 20%;
+  height: 50%;
+  margin-bottom: 2%;
+  margin-top: 1%;
+}
+
+@media (min-aspect-ratio: 1/1) {
+  .sectn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 auto;
+  }
+
+  img {
+    width: 20%;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  p {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  p {
+    font-size: 25px;
+    width: 80%;
+    padding-bottom: 5%;
+  }
+  img {
+    width: 70%;
+    padding-bottom: 5%;
+  }
+}
